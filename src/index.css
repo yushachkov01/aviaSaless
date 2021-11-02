@@ -1,0 +1,57 @@
+body {
+  background: url( data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwcHBwcHBwcGBgcHBwoGBwcGBw8ICQcKFREWIhURExMYKCggGBolJx8fITEhJSkrLi4uFx8zODMsNygtLisBCgoKDQ0NDg0NFSsZFRktKysrKysrLS0rKysrNysrKysrKystKysrKysrKysrKysrKystLSsrKystKysrKysrK//AABEIAMkA+wMBIgACEQEDEQH/xAAWAAEBAQAAAAAAAAAAAAAAAAAAAQL/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFwEBAQEBAAAAAAAAAAAAAAAAAAEHBv/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ANgOzZoAKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAAAIACgAAAAgCgAAACKIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/9k=)
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.aviaSales{
+  
+  color: white;
+  font-family:  Hand, cursive; 
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  margin-top: 108px;
+}
+
+.registracion, .entrance{
+  color: white;
+  font-size: 18px;
+  display: flex;
+  justify-content:flex-end;
+}
+.title{
+  color: white;
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+}
+.inputBlock{
+  display: flex;
+  justify-content: center;
+}
+.myInputWhere{
+  background-color: #f6f6f6; /*Цвет текстового поля*/
+  border-radius: 10px 0px 0px 10px; /*Закругляем уголки*/
+
+}
+.myInputArrival, .myInputWhen, .myInputBack{
+  background-color: #f6f6f6; /*Цвет текстового поля*/
+  /* border-radius: 10px 10px 10px 10px; Закругляем уголки */
+
+}
+.myInputQuantity{
+  
+  background-color: #f6f6f6; /*Цвет текстового поля*/
+  border-radius: 0px 10px 10px 0px; /*Закругляем уголки*/
+
+}
+.myButtonSaveTickets{
+  margin-left: 5px;
+  background-color: #ffa500; /*Цвет текстового поля*/
+  border-radius: 10px 10px 10px 10px; /*Закругляем уголки*/
+
+}

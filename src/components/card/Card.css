@@ -1,0 +1,9 @@
+.card{
+    background-color: rgb(234, 243, 240);
+    width: 50%;
+    height: 30%;
+    border-radius: 10px 10px 10px 10px; /*Закругляем уголки*/
+    display: flex;
+    justify-content: center;
+    margin-top: 108px;
+}
