@@ -9,15 +9,13 @@ function MyField() {
   const dispatch = useDispatch()
   useEffect(() => {
     
-    fetch("https://google-flights-search.p.rapidapi.com/search?departure_airport_code=SFO&arrival_airport_code=LAX&flight_class=Economy", {
+    fetch("https://booking-com.p.rapidapi.com/v1/metadata/exchange-rates?currency=AED&locale=en-gb", {
       "method": "GET",
       "headers": {
-        "x-rapidapi-host": "google-flights-search.p.rapidapi.com",
+        "x-rapidapi-host": "booking-com.p.rapidapi.com",
         "x-rapidapi-key": "56fe016395mshc097d1083226cc2p110289jsn2f839cc3763b"
       }
-    })
-
-    
+    }) 
     .then(response => {
       console.log('---------------------------')
       return response.json();
