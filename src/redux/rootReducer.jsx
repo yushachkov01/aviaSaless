@@ -9,3 +9,4 @@ switch (type) {
 };
 
 export default rootReducer;
+

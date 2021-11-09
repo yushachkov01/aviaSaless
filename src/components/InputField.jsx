@@ -8,21 +8,21 @@ import { useDispatch } from 'react-redux'
 function MyField() {
   const dispatch = useDispatch()
   useEffect(() => {
-    
-    fetch("https://booking-com.p.rapidapi.com/v1/metadata/exchange-rates?currency=AED&locale=en-gb", {
+
+    fetch("https://booking-com.p.rapidapi.com/v1/hotels/locations?locale=en-gb&name=Berlin", {
       "method": "GET",
       "headers": {
         "x-rapidapi-host": "booking-com.p.rapidapi.com",
-        "x-rapidapi-key": "56fe016395mshc097d1083226cc2p110289jsn2f839cc3763b"
+        "x-rapidapi-key": "043d5b9b8cmshc35d016732b9c2ep1e797ajsne4c65f7355b0"
       }
-    }) 
-    .then(response => {
-      console.log('---------------------------')
-      return response.json();
+    })
+      .then(response => {
+        console.log('---------------------------')
+        return response.json();
       })
       .then(response => {
         console.log('-------------->>', response);   // here will be dispatch
-        dispatch({ type: 'SEND_RESPONSE', payload: response.Places});
+        dispatch({ type: 'SEND_RESPONSE', payload: response });
 
       })
       .catch(err => {
@@ -32,7 +32,14 @@ function MyField() {
   }, [])
 
   return (
+
     <div className="inputBlock">
+
+      <h1 className="aviaSales">авиасэйлс</h1>
+      <a className="registracion "> Зарегистрироваться</a>
+      <a className="entrance"> Войти</a>
+      <h1 className="title">Поиск дешёвых авиабилетов</h1>
+
       <input className="myInputWhere" placeholder="Откуда"></input>
       <input className="myInputArrival" placeholder="Куда"></input>
       <input className="myInputWhen" placeholder="Когда"></input>
@@ -51,3 +58,5 @@ function MyField() {
   )
 }
 export default MyField;
+
+

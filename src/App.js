@@ -1,5 +1,5 @@
 import './App.css';
-import MyField from './components/InputField';
+import MyField from './components/booking-fields/BookingFields';
 import { Switch, Route, BrowserRouter as Router, } from 'react-router-dom'
 import Card from './components/card/Card'
 import { createStore } from 'redux'
@@ -17,10 +17,10 @@ function App() {
         <Switch>
           <Route exact path='/' >
             <div className="App">
-              <h1 className="aviaSales">авиасэйлс</h1>
+              <h1 className="aviaSales">booking</h1>
               <a className="registracion "> Зарегистрироваться</a>
               <a className="entrance"> Войти</a>
-              <h1 className="title">Поиск дешёвых авиабилетов</h1>
+              <h1 className="title">Поиск дешёвых отелей</h1>
               <MyField />
             </div>
           </Route>
@@ -35,3 +35,5 @@ function App() {
 }
 
 export default App;
+
+// Из filteredFlightData сделать карточки с отелями в css нарисоват эту карточку и вывести отели. 
