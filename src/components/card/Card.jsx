@@ -12,11 +12,13 @@ const Card = () => {
   console.log('Данные со 2 страницы', filteredFlightData)
   
   return (
-
     <div className="card">
-    <h1>Hello World</h1>
-   {filteredFlightData.map()}
-      {JSON.stringify(flightData)}
+    <p>
+   {filteredFlightData.map((item) =>{
+      return(JSON.stringify(item.hotel_name))
+   })}
+   </p>
+      {/* {JSON.stringify(flightData)} */}
     </div>
   )
 };

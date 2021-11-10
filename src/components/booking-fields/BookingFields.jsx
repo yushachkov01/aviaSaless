@@ -10,11 +10,12 @@ function MyField() {
 
   useEffect(() => {
 
+
     fetch(`https://booking-com.p.rapidapi.com/v1/hotels/locations?locale=en-gb&name=${state}`, {
       "method": "GET",
       "headers": {
         "x-rapidapi-host": "booking-com.p.rapidapi.com",
-        "x-rapidapi-key": "043d5b9b8cmshc35d016732b9c2ep1e797ajsne4c65f7355b0"
+        "x-rapidapi-key": "56fe016395mshc097d1083226cc2p110289jsn2f839cc3763b"
       }
     })
       .then(response => {
@@ -32,17 +33,18 @@ function MyField() {
             "method": "GET",
             "headers": {
               "x-rapidapi-host": "booking-com.p.rapidapi.com",
-              "x-rapidapi-key": "043d5b9b8cmshc35d016732b9c2ep1e797ajsne4c65f7355b0"
+              "x-rapidapi-key": "56fe016395mshc097d1083226cc2p110289jsn2f839cc3763b"
             }
           })
-          .then(response => {
-            return response.json()
-          })
+
+            .then(response => {
+              return response.json()
+            })
             .then(response => {
               console.log(response)
-              dispatch({ type: 'SEND_RESPONSE', payload: response.result});
-              
-            })    
+              dispatch({ type: 'SEND_RESPONSE', payload: response.result });
+
+            })
             .catch(err => {
               console.error(err);
             });
