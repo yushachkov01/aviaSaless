@@ -1,9 +1,20 @@
 .card{
     background-color: rgb(234, 243, 240);
-    width: 50%;
+    width: 27%;
     height: 30%;
     border-radius: 10px 10px 10px 10px; /*Закругляем уголки*/
-    display: flex;
-    justify-content: center;
     margin-top: 108px;
 }
+.hotel-card{ 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+p{
+    font-size:11px;
+}
+/* .photo_url{
+    width:200px;
+    height:272px
+} */

@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux'
 
 
 function MyField() {
+
   const dispatch = useDispatch()
 
   const [state, setState] = useState('')
@@ -60,11 +61,11 @@ function MyField() {
 
 
 
-
+  
   return (
     <div className="inputBlock">
       <input value={state} onChange={(e) => setState(e.target.value)} className="myCity" placeholder="Введите город"></input>
-      <input className="myInputWhen" placeholder="Когда"></input>
+      <input type="date" className="myInputWhen" placeholder="Когда"></input>
 
       <Link to="/results" className="myButtonSaveTickets">Найти отель</Link>
 
