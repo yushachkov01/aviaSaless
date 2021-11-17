@@ -6,7 +6,6 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import { rootReducer } from './redux/rootReducer'
 import { composeWithDevTools } from "redux-devtools-extension";
-import { fetchLocatons} from "./components/booking-fields/BookingFields"
 
 let store = createStore(rootReducer, composeWithDevTools())
 
