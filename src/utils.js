@@ -3,7 +3,7 @@ export function fetchHotels(locationId) {
     "method": "GET",
     "headers": {
       "x-rapidapi-host": "booking-com.p.rapidapi.com",
-      "x-rapidapi-key": "56fe016395mshc097d1083226cc2p110289jsn2f839cc3763b"
+      "x-rapidapi-key": "13ffdc2ed2msh8f75a8db64107c9p1dc280jsn35c024b76365"
     }
   })
     .then(response => {
@@ -12,4 +12,18 @@ export function fetchHotels(locationId) {
     .catch(err => {
       console.error(err);
     });
+}
+
+export function fetchLocatons(hotelsId) {
+  fetch(`https://booking-com.p.rapidapi.com/v1/hotels/locations?locale=en-gb&name=${hotelsId}`, {
+    "method": "GET",
+    "headers": {
+      "x-rapidapi-host": "booking-com.p.rapidapi.com",
+      "x-rapidapi-key": "13ffdc2ed2msh8f75a8db64107c9p1dc280jsn35c024b76365"
+    }
+  })
+    .then(response => {
+      return response.json();
+    })
+
 }

@@ -1,43 +1,47 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
-import {fetchHotels} from '../../utils.js'
+import { fetchHotels, fetchLocatons } from '../../utils.js'
 
 function MyField() {
   const dispatch = useDispatch()
   const [state, setState] = useState('')
-  useEffect(() => {
+  // useEffect(() => {
+  //   fetchLocatons(state)
+  //     .then(response => {
+  //       console.log(response)
+  //       const destIds = response.map((item) => {
+  //         return item.dest_id;
+  //       })
 
-    fetch(`https://booking-com.p.rapidapi.com/v1/hotels/locations?locale=en-gb&name=${state}`, {
-      "method": "GET",
-      "headers": {
-        "x-rapidapi-host": "booking-com.p.rapidapi.com",
-        "x-rapidapi-key": "56fe016395mshc097d1083226cc2p110289jsn2f839cc3763b"
-      }
-    })
-      .then(response => {
-        return response.json();
-      })
-      .then(response => {
-        console.log(response)
-        const destIds = response.map((item) => {
-          return item.dest_id;
-        })
+  //       destIds.forEach((destId) => {
 
-        destIds.forEach((destId) => {
+  //         fetchHotels(destId)
+  //           .then(response => {
+  //             console.log(response)
+  //             dispatch({ type: 'SEND_RESPONSE', payload: response.result });
+  //           })
+  //       })
+  //     })
+  //     .then(response => {
+  //       console.log(response)
+  //       const destIds = response.map((item) => {
+  //         return item.dest_id;
+  //       })
 
-          fetchHotels(destId)
-            .then(response => {
-              console.log(response)
-              dispatch({ type: 'SEND_RESPONSE', payload: response.result });
-            })
-        })
-      })
-      .catch(err => {
-        console.error(err);
-      });
+  //       destIds.forEach((destId) => {
 
-  }, [state])
+  //         fetchHotels(destId)
+  //           .then(response => {
+  //             console.log(response)
+  //             dispatch({ type: 'SEND_RESPONSE', payload: response.result });
+  //           })
+  //       })
+  //     })
+  //     .catch(err => {
+  //       console.error(err);
+  //     });
+  // }, [state])
 
 
 
